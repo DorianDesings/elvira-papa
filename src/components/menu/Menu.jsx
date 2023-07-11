@@ -5,23 +5,35 @@ const Menu = ({ showMenu, setShowMenu }) => {
 		<ContainerMenu showMenu={showMenu}>
 			<nav>
 				<StyledUl>
-					<li onClick={() => setShowMenu(false)}>
-						<StyledLink to='/'>INICIO</StyledLink>
+					<li>
+						<StyledLink onClick={() => setShowMenu(false)} to='/'>
+							INICIO
+						</StyledLink>
 					</li>
 					<li>
-						<StyledLink to='/galeria'>GALERIA</StyledLink>
+						<StyledLink onClick={() => setShowMenu(false)} to='/galeria'>
+							GALERIA
+						</StyledLink>
 					</li>
 					<li>
-						<StyledLink to='/retrato'>RETRATO</StyledLink>
+						<StyledLink onClick={() => setShowMenu(false)} to='/retrato'>
+							RETRATO
+						</StyledLink>
 					</li>
 					<li>
-						<StyledLink to='/prensa'>PRENSA Y TEXTOS</StyledLink>
+						<StyledLink onClick={() => setShowMenu(false)} to='/prensa'>
+							PRENSA Y TEXTOS
+						</StyledLink>
 					</li>
 					<li>
-						<StyledLink to='/taller'>MI TALLER</StyledLink>
+						<StyledLink onClick={() => setShowMenu(false)} to='/taller'>
+							MI TALLER
+						</StyledLink>
 					</li>
 					<li>
-						<StyledLink to='/contact'>CONTACTO</StyledLink>
+						<StyledLink onClick={() => setShowMenu(false)} to='/contact'>
+							CONTACTO
+						</StyledLink>
 					</li>
 				</StyledUl>
 			</nav>

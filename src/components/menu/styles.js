@@ -3,19 +3,22 @@ import { NavLink } from 'react-router-dom';
 
 const ContainerMenu = styled.div`
 	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100vh;
 	background-color: #4e4e4e;
-	top: 0;
 	color: white;
-	padding-top: 10rem;
-	display: flex;
-	justify-content: center;
-	display: ${({ showMenu }) => (showMenu ? 'block' : 'none')};
+	transform: translateX(${({ showMenu }) => (showMenu ? '0' : '100%')});
+	transition: transform 0.3s;
+
 	z-index: 1;
 	/* overflow: hidden; */
 	@media screen and (min-width: 768px) {
-		display: block;
+		transform: translateX(0);
 		height: 50px;
 		position: relative;
 		background-color: transparent;

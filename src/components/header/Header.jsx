@@ -7,12 +7,14 @@ const Header = () => {
 	const navigate = useNavigate();
 
 	const [showMenu, setShowMenu] = useState(false);
+
 	return (
 		<div>
 			<ContainerHeader>
 				<StyledLogo
 					onClick={() => {
-						navigate('/'), setShowMenu(false);
+						navigate('/');
+						setShowMenu(false);
 					}}
 					src={showMenu ? 'assets/logo-invert.png' : 'assets/logo.png'}
 					alt=''
@@ -23,7 +25,7 @@ const Header = () => {
 					alt='icon-menu'
 				/>
 			</ContainerHeader>
-			<Menu setShowMenu={setShowMenu} />
+			<Menu showMenu={showMenu} setShowMenu={setShowMenu} />
 		</div>
 	);
 };
